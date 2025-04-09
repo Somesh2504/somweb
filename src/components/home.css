@@ -1,0 +1,223 @@
+/* Main Layout */
+.inhome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  gap: 100px;
+  color: white;
+  padding: 0 20px;
+  background: #1c1f25;
+}
+
+.homeimg {
+  margin-left: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.homeimg div,
+.homeimg .lottie {
+  height: 400px;
+  width: 400px;
+}
+
+/* Typography */
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+}
+
+.head h1 {
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.intro {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #e0e0e0;
+}
+
+.my_docs {
+  display: flex;
+  gap: 20px;
+}
+
+.resume,
+.connect {
+  margin-top: 30px;
+  padding: 10px 15px;
+  background-color: #8ECF56;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100px;
+  transition: background 0.2s ease;
+}
+
+.resume:hover,
+.connect:hover {
+  background-color: #ffffff;
+  color: #8ECF56;
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+}
+
+.socials a {
+  font-size: 24px;
+  color: white;
+  transition: transform 0.2s ease-in-out;
+}
+
+.socials a:hover {
+  transform: scale(1.2);
+}
+
+.leetcode-icon {
+  width: 24px;
+  height: 24px;
+  padding-top: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Highlight name */
+.highlight-name {
+  position: relative;
+  color: #00ffa3;
+  font-weight: bold;
+}
+
+.highlight-name::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  background: #00ffa3;
+  bottom: -5px;
+  left: 0;
+  animation: underlineLoop 2s ease-in-out infinite;
+  width: 0;
+}
+
+@keyframes underlineLoop {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+/* @media (max-width: 1024px) {
+  .inhome {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .homeimg {
+    margin-left: 0;
+    height: auto;
+  }
+
+  .homeimg div {
+    height: 300px;
+    width: 300px;
+  }
+
+  .head {
+    padding-top: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .head h1 {
+    font-size: 40px;
+  }
+
+  .intro {
+    font-size: 16px;
+  }
+
+  .my_docs {
+    justify-content: center;
+  }
+} */
+
+/* Mobile - below 768px */
+@media (max-width: 768px) {
+  .homeimg div {
+    height: 250px;
+    width: 250px;
+   
+  }
+  .homeimg{
+    margin-left: 0px;
+  }
+
+  .head h1 {
+    font-size: 32px;
+  }
+
+  .head h2 {
+    font-size: 20px;
+  }
+
+  .intro {
+    font-size: 14px;
+  }
+
+  .resume,
+  .connect {
+    width: 70px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .socials {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .socials a {
+    font-size: 20px;
+  }
+
+  .leetcode-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  
+  .inhome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    gap:0px;
+    color: white;
+    padding: 0 20px;
+    background: #1c1f25;
+  }
+  .head{
+    width: 100%;
+    margin-right: 20px;
+  }
+  
+}
